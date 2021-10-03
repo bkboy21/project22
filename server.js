@@ -37,13 +37,8 @@ app.get('/graetful/new', (req, res) => {
 
 // CREATE
 app.post('/graetful', (req, res) => {
-    if (req.body.readyToEat === "on"){
-        req.body.readyToEat = true;
-    } else {
-        req.body.readyToEat = false;
-    }
-    console.log(req.body);
-    graetful.push(req.body);
+    
+    gBank.push(req.body);
     res.redirect("/graetful");
 }); 
 
@@ -54,9 +49,9 @@ app.get('/fruits/:indexOfFruitsArray', (req, res)=>{
 
 // DELETE
 // DELETE /fruits/2 --|
-app.delete('/fruits/:indexOfFruitsArray', (req, res) => {
-  fruits.splice(req.params.indexOfFruitsArray, 1);
-  res.redirect('/fruits');
+app.delete('/graetful/:indexOfFruitsArray', (req, res) => {
+  gBank.splice(req.params.indexOfFruitsArray, 1);
+  res.redirect('/graetful');
 });
 
 // EDIT (see a form to edit the data resource)
@@ -67,16 +62,16 @@ app.get('/fruits/:idx/edit', (req, res) => {
   });
 });
 
-app.put('/fruits/:idx', (req, res) => {
-	if(req.body.readyToEat === 'on') { //if checked, req.body.readyToEat is set to 'on'
-		req.body.readyToEat = true;
-	} else { //if not checked, req.body.readyToEat is undefined
-		req.body.readyToEat = false;
-	}
-  // req.body.readyToEat = (req.body.readyToEat === 'on');
-  fruits[req.params.idx] = req.body;
-  res.redirect('/fruits');
-});
+// app.put('/fruits/:idx', (req, res) => {
+// 	if(req.body.readyToEat === 'on') { //if checked, req.body.readyToEat is set to 'on'
+// 		req.body.readyToEat = true;
+// 	} else { //if not checked, req.body.readyToEat is undefined
+// 		req.body.readyToEat = false;
+// 	}
+//   // req.body.readyToEat = (req.body.readyToEat === 'on');
+//   fruits[req.params.idx] = req.body;
+//   res.redirect('/fruits');
+// });
 
 // Express Web Server port - app.listen
 app.listen(port, ()=>{
