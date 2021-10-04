@@ -62,6 +62,18 @@ app.get('/fruits/:idx/edit', (req, res) => {
   });
 });
 
+
+
+// test
+
+
+
+
+
+
+
+// test
+
 // app.put('/fruits/:idx', (req, res) => {
 // 	if(req.body.readyToEat === 'on') { //if checked, req.body.readyToEat is set to 'on'
 // 		req.body.readyToEat = true;

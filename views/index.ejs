@@ -5,11 +5,20 @@
     <meta charset="utf-8">
     <title>Grateful</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+
+    <!-- test -->
     <style>
         /* body {
     background-image: url("https://media.giphy.com/media/fSXHTR5nSzKMOPVodt/giphy.gif");
@@ -32,19 +41,96 @@
     <iframe src="https://giphy.com/embed/lD3DbDpze1LtioImZg" width="480" height="422" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/slot-lD3DbDpze1LtioImZg"></a></p>
 </div>
 
-    
+<!-- test -->
+
+<style>
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        width: 70%;
+        margin: auto;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2></h2>
+    <p></p>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                
+                <h1>
+                    <a href="/graetful/<%= allG[1].textG %>">
+                        </a>
+                    
+                </h1>
+                
+            </div>
+            <% for(let i=0; i < allG.length; i++) { %>
+            <div class="item">
+                
+                    <h1>
+                        <a href="/graetful/<%= i %>">
+                            <%= allG[i].textG %>
+                        </a>
+                        <!-- <form action="/graetful/<%=i; %>?_method=DELETE" method="POST">
+                            <input type="submit" value="DELETE" />
+                        </form>
+                        <br>
+                        <a href="/fruits/<%=i; %>/edit">Edit</a> -->
+                    </h1>
+                    
+            </div>
+            <% } %>
+          
+        </div>
+
+
+    <main>
+
+
+    </main>
+
+<!-- 
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a> -->
+    </div>
+</div>
+
+
+
+
+
+
+
+    <!-- test -->
     <ul>
         <% for(let i=0; i < allG.length; i++) { %>
-            <li>
+            <h2>
                 <a href="/graetful/<%= i %>">
                     <%= allG[i].textG %>
                 </a>
                 <form action="/graetful/<%=i; %>?_method=DELETE" method="POST">
                     <input type="submit" value="DELETE" />
                 </form>
-                <br>
-                <a href="/fruits/<%=i; %>/edit">Edit</a>
-            </li>
+                
+                <a href="/fruits/<%=i; %>/edit" >Edit</a>
+            </h2>
             </li>
             <% } %>
     </ul>
