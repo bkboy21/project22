@@ -42,10 +42,10 @@ app.post('/graetful', (req, res) => {
     res.redirect("/graetful");
 }); 
 
-// // SHOW
-// app.get('/fruits/:indexOfFruitsArray', (req, res)=>{
-//     res.render("show.ejs", {fruit: fruits[req.params.indexOfFruitsArray]});
-// });
+// SHOW
+app.get('/graetful/:indexOfFruitsArray', (req, res)=>{
+    res.render("show.ejs", {allG: gBank[req.params.indexOfFruitsArray]});
+});
 
 // DELETE
 // DELETE /fruits/2 --|
