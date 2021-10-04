@@ -10,3 +10,10 @@ h1{
     display: flex;
     justify-content: center;
 }
+
+.dBtn{
+    
+    background-color: coral;
+    position:static;
+
+}

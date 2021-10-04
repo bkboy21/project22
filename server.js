@@ -55,9 +55,9 @@ app.delete('/graetful/:indexOfFruitsArray', (req, res) => {
 });
 
 // EDIT (see a form to edit the data resource)
-app.get('/fruits/:idx/edit', (req, res) => {
+app.get('/graetful/:idx/edit', (req, res) => {
   res.render('edit.ejs', {
-    fruit: fruits[req.params.idx],
+    allG: gBank[req.params.idx],
     index: req.params.idx
   });
 });

@@ -1,19 +1,35 @@
 const grate = [
     {
         
-        textG: 'for haveing a car ',
+        textG: 'haveing a car ',
         
     },
-    {
+   
+    // {
         
-        textG: 'for haveing a loving pupey ',
+    //     textG: 'Love ',
         
-    },
-    {
+    // },
+    // {
         
-        textG: 'for beaing able to laern a new skill ',
+    //     textG: 'feeling good ',
         
-    },
+    // },
+    // {
+        
+    //     textG: 'Living in a nice aprtment',
+        
+    // },
+    // {
+        
+    //     textG: 'haveing the best pup in the world',
+        
+    // },
+    // {
+        
+    //     textG: 'having a loving wife',
+        
+    // },
     
 ]; 
 
