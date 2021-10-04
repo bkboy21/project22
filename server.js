@@ -4,7 +4,7 @@ const methodOverride = require("method-override");
 
 
 const app = express();
-const port = 3000 || process.env.PORT
+const PORT = process.env.PORT || 3000;
 
 const gBank = require("./models/gBank.js");
 
@@ -86,6 +86,6 @@ app.get('/graetful/:idx/edit', (req, res) => {
 // });
 
 // Express Web Server port - app.listen
-app.listen(port, ()=>{
-    console.log(`listening on port`, port)
+app.listen(PORT, ()=>{
+    console.log(`listening on port`, PORT)
 });
