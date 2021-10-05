@@ -26,7 +26,7 @@ app.use(express.static("public"));
 // Routes go here - app.get, delete, post...
 
 // INDEX
-app.get('/graetful', (req, res)=>{
+app.get('/', (req, res)=>{
     res.render("index.ejs", { allG: gBank });
 });
 
@@ -43,8 +43,8 @@ app.post('/graetful', (req, res) => {
 }); 
 
 // SHOW
-app.get('/graetful/:indexOfFruitsArray', (req, res)=>{
-    res.render("show.ejs", {allG: gBank[req.params.indexOfFruitsArray]});
+app.get('/graetful/show', (req, res)=>{
+    res.render("show.ejs", { allG: gBank });
 });
 
 // DELETE

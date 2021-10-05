@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Fruits App</title>
-    </head>
-    <body>
-        <h1>Fruits show page</h1>
-        The <%= fruit.name; %> is  <%= fruit.color; %>.
-        <% if(fruit.readyToEat === true){ %>
-            It is ready to eat
-        <% } else { %>
-            It is not ready to eat
-        <% } %>
-        
-        <br /><br />
-        <a href="/fruits">Back to Index</a>
-    </body>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Grateful</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+   
+</head>
+
+<body>
+
+
+    <!-- test -->
+    <style>
+        /* body {
+    background-image: url("https://media.giphy.com/media/fSXHTR5nSzKMOPVodt/giphy.gif");
+    background-size: cover;
+    background-position: center;
+
+} */
+
+    </style>
+   
+   
+
+    <nav>
+        <a href="/graetful/new" type="button" class="btn btn-danger">Add To The List</button></a>
+        <a href="/" type="button" class="btn btn-danger">Back to Home</button></a>
+    </nav>
+    <h1>I Am Grateful For ...</h1>
+    <div class="showPage">
+    
+    <ul>
+        <% for(let i=0; i < allG.length; i++) { %>
+            <h2>
+                <a href="/graetful/<%= i %>">
+                    <%= allG[i].textG %>
+                </a>
+                <form action="/graetful/<%=i; %>?_method=DELETE" method="POST">
+                    <input type="submit" value="DELETE" />
+                </form>
+                
+                <a href="/graetful/<%=i; %>/edit" >Edit</a>
+            </h2>
+            </li>
+            <% } %>
+    </ul>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -5,31 +5,31 @@ const grate = [
         
     },
    
-    // {
+    {
         
-    //     textG: 'Love ',
+        textG: 'Love ',
         
-    // },
-    // {
+    },
+    {
         
-    //     textG: 'feeling good ',
+        textG: 'feeling good ',
         
-    // },
-    // {
+    },
+    {
         
-    //     textG: 'Living in a nice aprtment',
+        textG: 'Living in a nice aprtment',
         
-    // },
-    // {
+    },
+    {
         
-    //     textG: 'haveing the best pup in the world',
+        textG: 'haveing the best pup in the world',
         
-    // },
-    // {
+    },
+    {
         
-    //     textG: 'having a loving wife',
+        textG: 'having a loving wife',
         
-    // },
+    },
     
 ]; 
 
