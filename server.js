@@ -39,7 +39,7 @@ app.get('/graetful/new', (req, res) => {
 app.post('/graetful', (req, res) => {
     
     gBank.push(req.body);
-    res.redirect("/graetful");
+    res.redirect("/");
 }); 
 
 // SHOW
@@ -49,9 +49,9 @@ app.get('/graetful/show', (req, res)=>{
 
 // DELETE
 // DELETE /fruits/2 --|
-app.delete('/graetful/:indexOfFruitsArray', (req, res) => {
+app.delete('/graetful/show/:index', (req, res) => {
   gBank.splice(req.params.indexOfFruitsArray, 1);
-  res.redirect('/graetful');
+  res.redirect('/graetful/show');
 });
 
 // EDIT (see a form to edit the data resource)
